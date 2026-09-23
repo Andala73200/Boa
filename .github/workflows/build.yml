@@ -6,9 +6,6 @@ on:
     branches:
       - main
 
-permissions:
-  contents: read
-
 jobs:
   build:
     runs-on: windows-latest
@@ -26,38 +23,10 @@ jobs:
         shell: pwsh
         run: |
           python -m pip install --upgrade pip
-
           if (Test-Path "requirements.txt") {
             python -m pip install -r requirements.txt
           }
-
-          python -m pip install pyinstaller pillow
-
-      - name: Trouver le logo
-        shell: pwsh
-        run: |
-          $images = Get-ChildItem -Path . -Recurse -File |
-            Where-Object {
-              $_.Extension -in ".ico", ".png", ".jpg", ".jpeg" -and
-              $_.FullName -notmatch "\\(\.venv|venv|build|dist)\\"
-            }
-
-          $icon = $images |
-            Where-Object { $_.BaseName -match "^(boa|logo|icon|icone)$" } |
-            Select-Object -First 1
-
-          if (-not $icon) {
-            $icon = $images | Select-Object -First 1
-          }
-
-          if ($icon) {
-            Write-Host "Logo utilise : $($icon.FullName)"
-            "BOA_ICON=$($icon.FullName)" >> $env:GITHUB_ENV
-          }
-          else {
-            Write-Host "ERREUR : aucun logo trouve."
-            exit 1
-          }
+          python -m pip install pyinstaller
 
       - name: Construire BOA.exe
         shell: pwsh
@@ -68,7 +37,7 @@ jobs:
             --onefile `
             --windowed `
             --name "BOA" `
-            --icon "$env:BOA_ICON" `
+            --icon "assets/boa_logo.ico" `
             main.py
 
       - name: Publier BOA.exe
@@ -77,4 +46,3 @@ jobs:
           name: BOA-Windows
           path: dist/BOA.exe
           if-no-files-found: error
-
