@@ -1,4 +1,4 @@
-﻿name: Build BOA
+﻿name: Build BOA Windows
 
 on:
   workflow_dispatch:
@@ -6,16 +6,19 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: windows-latest
 
     steps:
       - name: Recuperer BOA
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Installer Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
@@ -23,17 +26,55 @@ jobs:
         shell: pwsh
         run: |
           python -m pip install --upgrade pip
-          if (Test-Path requirements.txt) {
-            pip install -r requirements.txt
+
+          if (Test-Path "requirements.txt") {
+            python -m pip install -r requirements.txt
           }
-          python -m pip install pyinstaller
+
+          python -m pip install pyinstaller pillow
+
+      - name: Trouver le logo
+        shell: pwsh
+        run: |
+          $images = Get-ChildItem -Path . -Recurse -File |
+            Where-Object {
+              $_.Extension -in ".ico", ".png", ".jpg", ".jpeg" -and
+              $_.FullName -notmatch "\\(\.venv|venv|build|dist)\\"
+            }
+
+          $icon = $images |
+            Where-Object { $_.BaseName -match "^(boa|logo|icon|icone)$" } |
+            Select-Object -First 1
+
+          if (-not $icon) {
+            $icon = $images | Select-Object -First 1
+          }
+
+          if ($icon) {
+            Write-Host "Logo utilise : $($icon.FullName)"
+            "BOA_ICON=$($icon.FullName)" >> $env:GITHUB_ENV
+          }
+          else {
+            Write-Host "ERREUR : aucun logo trouve."
+            exit 1
+          }
 
       - name: Construire BOA.exe
-        run: python -m PyInstaller --onefile --windowed --name BOA main.py
+        shell: pwsh
+        run: |
+          python -m PyInstaller `
+            --noconfirm `
+            --clean `
+            --onefile `
+            --windowed `
+            --name "BOA" `
+            --icon "$env:BOA_ICON" `
+            main.py
 
       - name: Publier BOA.exe
         uses: actions/upload-artifact@v4
         with:
           name: BOA-Windows
           path: dist/BOA.exe
+          if-no-files-found: error
 
