@@ -1,0 +1,5 @@
+"""Façade de compatibilité du module Math."""
+
+from boa.modules.math.specs import FEATURED_MATH_KEYS, MATH_BLOCK_KEYS, MATH_SPECS
+
+__all__ = ["FEATURED_MATH_KEYS", "MATH_BLOCK_KEYS", "MATH_SPECS"]

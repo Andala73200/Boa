@@ -1,0 +1,15 @@
+{
+  "bs4": "beautifulsoup4",
+  "cv2": "opencv-python",
+  "Crypto": "pycryptodome",
+  "dateutil": "python-dateutil",
+  "dotenv": "python-dotenv",
+  "jwt": "PyJWT",
+  "OpenGL": "PyOpenGL",
+  "PIL": "Pillow",
+  "psycopg2": "psycopg2-binary",
+  "pymysql": "PyMySQL",
+  "serial": "pyserial",
+  "sklearn": "scikit-learn",
+  "yaml": "PyYAML"
+}

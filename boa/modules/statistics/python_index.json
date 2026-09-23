@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "rules": [
+    {"id":"statistics.mean","block":"statistics_mean","kind":"function","names":["statistics.mean"],"arg_ports":["values"],"config":{"mode":"arithmetic"},"result_port":"result","priority":125},
+    {"id":"statistics.geometric_mean","block":"statistics_mean","kind":"function","names":["statistics.geometric_mean"],"arg_ports":["values"],"config":{"mode":"geometric"},"result_port":"result","priority":125},
+    {"id":"statistics.harmonic_mean","block":"statistics_mean","kind":"function","names":["statistics.harmonic_mean"],"arg_ports":["values"],"config":{"mode":"harmonic"},"result_port":"result","priority":125},
+    {"id":"statistics.median","block":"statistics_summary","kind":"function","names":["statistics.median"],"arg_ports":["values"],"result_port":"median","priority":125},
+    {"id":"statistics.variance","block":"statistics_dispersion","kind":"function","names":["statistics.variance"],"arg_ports":["values"],"config":{"mode":"sample"},"result_port":"variance","priority":125},
+    {"id":"statistics.pvariance","block":"statistics_dispersion","kind":"function","names":["statistics.pvariance"],"arg_ports":["values"],"config":{"mode":"population"},"result_port":"variance","priority":125},
+    {"id":"statistics.stdev","block":"statistics_dispersion","kind":"function","names":["statistics.stdev"],"arg_ports":["values"],"config":{"mode":"sample"},"result_port":"stdev","priority":125},
+    {"id":"statistics.pstdev","block":"statistics_dispersion","kind":"function","names":["statistics.pstdev"],"arg_ports":["values"],"config":{"mode":"population"},"result_port":"stdev","priority":125},
+    {"id":"statistics.covariance","block":"statistics_compare","kind":"function","names":["statistics.covariance"],"arg_ports":["first","second"],"result_port":"covariance","priority":125},
+    {"id":"statistics.correlation","block":"statistics_compare","kind":"function","names":["statistics.correlation"],"arg_ports":["first","second"],"result_port":"correlation","priority":125}
+  ]
+}

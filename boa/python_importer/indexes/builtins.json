@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "rules": [
+    {"id":"builtin.len","block":"value_length","kind":"function","names":["len"],"arg_ports":["value"],"result_port":"result","priority":150},
+    {"id":"builtin.int","block":"type_convert","kind":"function","names":["int"],"arg_ports":["value"],"config":{"mode":"int"},"result_port":"result","priority":140},
+    {"id":"builtin.float","block":"type_convert","kind":"function","names":["float"],"arg_ports":["value"],"config":{"mode":"float"},"result_port":"result","priority":140},
+    {"id":"builtin.str","block":"type_convert","kind":"function","names":["str"],"arg_ports":["value"],"config":{"mode":"str"},"result_port":"result","priority":140},
+    {"id":"builtin.list","block":"type_convert","kind":"function","names":["list"],"arg_ports":["value"],"config":{"mode":"list"},"result_port":"result","priority":140},
+    {"id":"builtin.tuple","block":"type_convert","kind":"function","names":["tuple"],"arg_ports":["value"],"config":{"mode":"tuple"},"result_port":"result","priority":140},
+    {"id":"builtin.set","block":"type_convert","kind":"function","names":["set"],"arg_ports":["value"],"config":{"mode":"set"},"result_port":"result","priority":140},
+    {"id":"builtin.dict","block":"type_convert","kind":"function","names":["dict"],"arg_ports":["value"],"config":{"mode":"dict"},"result_port":"result","priority":140},
+    {"id":"builtin.isinstance","block":"type_test","kind":"function","names":["isinstance"],"arg_ports":["value"],"min_args":2,"max_args":2,"type_argument":{"index":1,"config":"mode","allowed":["int","float","str","bool","list","tuple","set","dict","bytes"]},"result_port":"result","priority":160},
+    {"id":"builtin.min","block":"statistics_summary","kind":"function","names":["min"],"arg_ports":["values"],"result_port":"minimum","priority":130},
+    {"id":"builtin.max","block":"statistics_summary","kind":"function","names":["max"],"arg_ports":["values"],"result_port":"maximum","priority":130},
+    {"id":"builtin.sum","block":"statistics_summary","kind":"function","names":["sum"],"arg_ports":["values"],"result_port":"sum","priority":130},
+    {"id":"builtin.sorted","block":"collection_sort","kind":"function","names":["sorted"],"arg_ports":["collection"],"config":{"reverse":false},"config_keywords":{"reverse":"reverse"},"result_port":"result","priority":130}
+  ]
+}

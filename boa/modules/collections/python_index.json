@@ -1,0 +1,150 @@
+{
+  "schema": 1,
+  "rules": [
+    {
+      "id": "collections.append",
+      "block": "collection_append",
+      "kind": "method",
+      "names": [
+        "append"
+      ],
+      "receiver_port": "collection",
+      "arg_ports": [
+        "value"
+      ],
+      "result_port": "result",
+      "priority": 190
+    },
+    {
+      "id": "collections.get",
+      "block": "collection_get",
+      "kind": "method",
+      "names": [
+        "get"
+      ],
+      "receiver_port": "collection",
+      "min_args": 1,
+      "max_args": 1,
+      "arg_ports": [
+        "key"
+      ],
+      "config": {
+        "mode": "without_default"
+      },
+      "result_port": "result",
+      "priority": 180
+    },
+    {
+      "id": "collections.get.default",
+      "block": "collection_get",
+      "kind": "method",
+      "names": [
+        "get"
+      ],
+      "receiver_port": "collection",
+      "min_args": 2,
+      "max_args": 2,
+      "arg_ports": [
+        "key",
+        "default"
+      ],
+      "config": {
+        "mode": "with_default"
+      },
+      "result_port": "result",
+      "priority": 181
+    },
+    {
+      "id": "collections.enumerate",
+      "block": "collection_enumerate",
+      "kind": "function",
+      "names": [
+        "enumerate"
+      ],
+      "min_args": 1,
+      "max_args": 1,
+      "arg_ports": [
+        "collection"
+      ],
+      "config": {
+        "mode": "without_start"
+      },
+      "result_port": "result",
+      "priority": 180
+    },
+    {
+      "id": "collections.enumerate.start",
+      "block": "collection_enumerate",
+      "kind": "function",
+      "names": [
+        "enumerate"
+      ],
+      "min_args": 2,
+      "max_args": 2,
+      "arg_ports": [
+        "collection",
+        "start_index"
+      ],
+      "config": {
+        "mode": "with_start"
+      },
+      "result_port": "result",
+      "priority": 181
+    },
+    {
+      "id": "collections.enumerate.keyword",
+      "block": "collection_enumerate",
+      "kind": "function",
+      "names": [
+        "enumerate"
+      ],
+      "min_args": 1,
+      "max_args": 1,
+      "arg_ports": [
+        "collection"
+      ],
+      "keyword_ports": {
+        "start": "start_index"
+      },
+      "config": {
+        "mode": "with_start"
+      },
+      "result_port": "result",
+      "priority": 182
+    },
+    {
+      "id": "collections.zip",
+      "block": "collection_zip",
+      "kind": "function",
+      "names": [
+        "zip"
+      ],
+      "min_args": 2,
+      "max_args": 2,
+      "arg_ports": [
+        "first",
+        "second"
+      ],
+      "result_port": "result",
+      "priority": 180
+    },
+    {
+      "id": "collections.dict.keywords",
+      "block": "collection_dict",
+      "kind": "function",
+      "names": [
+        "dict"
+      ],
+      "min_args": 0,
+      "max_args": 0,
+      "arg_ports": [],
+      "dynamic_keywords": {
+        "port_prefix": "value_",
+        "config": "keys",
+        "max": 16
+      },
+      "result_port": "result",
+      "priority": 200
+    }
+  ]
+}

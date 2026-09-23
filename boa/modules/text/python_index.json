@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "rules": [
+    {"id":"text.lower","block":"text_transform","kind":"method","names":["lower"],"receiver_port":"text","arg_ports":[],"config":{"mode":"lower"},"result_port":"result","priority":120},
+    {"id":"text.upper","block":"text_transform","kind":"method","names":["upper"],"receiver_port":"text","arg_ports":[],"config":{"mode":"upper"},"result_port":"result","priority":120},
+    {"id":"text.title","block":"text_transform","kind":"method","names":["title"],"receiver_port":"text","arg_ports":[],"config":{"mode":"title"},"result_port":"result","priority":120},
+    {"id":"text.capitalize","block":"text_transform","kind":"method","names":["capitalize"],"receiver_port":"text","arg_ports":[],"config":{"mode":"capitalize"},"result_port":"result","priority":120},
+    {"id":"text.strip","block":"text_transform","kind":"method","names":["strip"],"receiver_port":"text","arg_ports":[],"config":{"mode":"strip"},"result_port":"result","priority":120},
+    {"id":"text.split.empty","block":"text_split_join","kind":"method","names":["split"],"receiver_port":"value","arg_ports":["separator_value"],"min_args":0,"max_args":1,"config":{"mode":"split"},"result_port":"result","priority":120},
+    {"id":"text.join","block":"text_split_join","kind":"method","names":["join"],"receiver_port":"separator_value","arg_ports":["value"],"config":{"mode":"join"},"result_port":"result","priority":120},
+    {"id":"text.replace","block":"text_replace","kind":"method","names":["replace"],"receiver_port":"text","arg_ports":["old","new","count"],"min_args":2,"max_args":3,"result_port":"result","priority":120},
+    {"id":"text.find","block":"text_search","kind":"method","names":["find"],"receiver_port":"text","arg_ports":["query"],"config":{"mode":"find","case_sensitive":true},"result_port":"result","priority":120},
+    {"id":"text.count","block":"text_search","kind":"method","names":["count"],"receiver_port":"text","arg_ports":["query"],"config":{"mode":"count","case_sensitive":true},"result_port":"result","priority":120},
+    {"id":"text.startswith","block":"text_search","kind":"method","names":["startswith"],"receiver_port":"text","arg_ports":["query"],"config":{"mode":"starts_with","case_sensitive":true},"result_port":"result","priority":120},
+    {"id":"text.endswith","block":"text_search","kind":"method","names":["endswith"],"receiver_port":"text","arg_ports":["query"],"config":{"mode":"ends_with","case_sensitive":true},"result_port":"result","priority":120},
+    {"id":"text.format_map","block":"text_format","kind":"method","names":["format_map"],"receiver_port":"template","arg_ports":["values"],"result_port":"result","priority":120}
+  ]
+}

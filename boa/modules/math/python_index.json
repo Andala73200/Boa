@@ -1,0 +1,822 @@
+{
+  "schema": 1,
+  "rules": [
+    {
+      "id": "math.math_ceil",
+      "block": "math_ceil",
+      "kind": "function",
+      "names": [
+        "math.ceil"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_floor",
+      "block": "math_floor",
+      "kind": "function",
+      "names": [
+        "math.floor"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_trunc",
+      "block": "math_trunc",
+      "kind": "function",
+      "names": [
+        "math.trunc"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_fabs",
+      "block": "math_fabs",
+      "kind": "function",
+      "names": [
+        "math.fabs"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_copysign",
+      "block": "math_copysign",
+      "kind": "function",
+      "names": [
+        "math.copysign"
+      ],
+      "arg_ports": [
+        "x",
+        "y"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_fmod",
+      "block": "math_fmod",
+      "kind": "function",
+      "names": [
+        "math.fmod"
+      ],
+      "arg_ports": [
+        "x",
+        "y"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_remainder",
+      "block": "math_remainder",
+      "kind": "function",
+      "names": [
+        "math.remainder"
+      ],
+      "arg_ports": [
+        "x",
+        "y"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_fma",
+      "block": "math_fma",
+      "kind": "function",
+      "names": [
+        "math.fma"
+      ],
+      "arg_ports": [
+        "x",
+        "y",
+        "z"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_sqrt",
+      "block": "math_sqrt",
+      "kind": "function",
+      "names": [
+        "math.sqrt"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_cbrt",
+      "block": "math_cbrt",
+      "kind": "function",
+      "names": [
+        "math.cbrt"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_pow",
+      "block": "math_pow",
+      "kind": "function",
+      "names": [
+        "math.pow"
+      ],
+      "arg_ports": [
+        "x",
+        "y"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_exp",
+      "block": "math_exp",
+      "kind": "function",
+      "names": [
+        "math.exp"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_exp2",
+      "block": "math_exp2",
+      "kind": "function",
+      "names": [
+        "math.exp2"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_expm1",
+      "block": "math_expm1",
+      "kind": "function",
+      "names": [
+        "math.expm1"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_log",
+      "block": "math_log",
+      "kind": "function",
+      "names": [
+        "math.log"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_log_base",
+      "block": "math_log_base",
+      "kind": "function",
+      "names": [
+        "math.log"
+      ],
+      "arg_ports": [
+        "x",
+        "base"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_log1p",
+      "block": "math_log1p",
+      "kind": "function",
+      "names": [
+        "math.log1p"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_log2",
+      "block": "math_log2",
+      "kind": "function",
+      "names": [
+        "math.log2"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_log10",
+      "block": "math_log10",
+      "kind": "function",
+      "names": [
+        "math.log10"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_sin",
+      "block": "math_sin",
+      "kind": "function",
+      "names": [
+        "math.sin"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_cos",
+      "block": "math_cos",
+      "kind": "function",
+      "names": [
+        "math.cos"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_tan",
+      "block": "math_tan",
+      "kind": "function",
+      "names": [
+        "math.tan"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_asin",
+      "block": "math_asin",
+      "kind": "function",
+      "names": [
+        "math.asin"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_acos",
+      "block": "math_acos",
+      "kind": "function",
+      "names": [
+        "math.acos"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_atan",
+      "block": "math_atan",
+      "kind": "function",
+      "names": [
+        "math.atan"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_atan2",
+      "block": "math_atan2",
+      "kind": "function",
+      "names": [
+        "math.atan2"
+      ],
+      "arg_ports": [
+        "y",
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_radians",
+      "block": "math_radians",
+      "kind": "function",
+      "names": [
+        "math.radians"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_degrees",
+      "block": "math_degrees",
+      "kind": "function",
+      "names": [
+        "math.degrees"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_sinh",
+      "block": "math_sinh",
+      "kind": "function",
+      "names": [
+        "math.sinh"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_cosh",
+      "block": "math_cosh",
+      "kind": "function",
+      "names": [
+        "math.cosh"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_tanh",
+      "block": "math_tanh",
+      "kind": "function",
+      "names": [
+        "math.tanh"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_asinh",
+      "block": "math_asinh",
+      "kind": "function",
+      "names": [
+        "math.asinh"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_acosh",
+      "block": "math_acosh",
+      "kind": "function",
+      "names": [
+        "math.acosh"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_atanh",
+      "block": "math_atanh",
+      "kind": "function",
+      "names": [
+        "math.atanh"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_factorial",
+      "block": "math_factorial",
+      "kind": "function",
+      "names": [
+        "math.factorial"
+      ],
+      "arg_ports": [
+        "n"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_comb",
+      "block": "math_comb",
+      "kind": "function",
+      "names": [
+        "math.comb"
+      ],
+      "arg_ports": [
+        "n",
+        "k"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_perm",
+      "block": "math_perm",
+      "kind": "function",
+      "names": [
+        "math.perm"
+      ],
+      "arg_ports": [
+        "n",
+        "k"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_gcd",
+      "block": "math_gcd",
+      "kind": "function",
+      "names": [
+        "math.gcd"
+      ],
+      "arg_ports": [
+        "a",
+        "b"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_lcm",
+      "block": "math_lcm",
+      "kind": "function",
+      "names": [
+        "math.lcm"
+      ],
+      "arg_ports": [
+        "a",
+        "b"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_isqrt",
+      "block": "math_isqrt",
+      "kind": "function",
+      "names": [
+        "math.isqrt"
+      ],
+      "arg_ports": [
+        "n"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_fsum",
+      "block": "math_fsum",
+      "kind": "function",
+      "names": [
+        "math.fsum"
+      ],
+      "arg_ports": [
+        "values"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_prod",
+      "block": "math_prod",
+      "kind": "function",
+      "names": [
+        "math.prod"
+      ],
+      "arg_ports": [
+        "values"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_sumprod",
+      "block": "math_sumprod",
+      "kind": "function",
+      "names": [
+        "math.sumprod"
+      ],
+      "arg_ports": [
+        "p",
+        "q"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_dist",
+      "block": "math_dist",
+      "kind": "function",
+      "names": [
+        "math.dist"
+      ],
+      "arg_ports": [
+        "p",
+        "q"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_hypot",
+      "block": "math_hypot",
+      "kind": "function",
+      "names": [
+        "math.hypot"
+      ],
+      "arg_ports": [
+        "x",
+        "y"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_isfinite",
+      "block": "math_isfinite",
+      "kind": "function",
+      "names": [
+        "math.isfinite"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_isinf",
+      "block": "math_isinf",
+      "kind": "function",
+      "names": [
+        "math.isinf"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_isnan",
+      "block": "math_isnan",
+      "kind": "function",
+      "names": [
+        "math.isnan"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_isclose",
+      "block": "math_isclose",
+      "kind": "function",
+      "names": [
+        "math.isclose"
+      ],
+      "arg_ports": [
+        "a",
+        "b"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_ldexp",
+      "block": "math_ldexp",
+      "kind": "function",
+      "names": [
+        "math.ldexp"
+      ],
+      "arg_ports": [
+        "x",
+        "i"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_nextafter",
+      "block": "math_nextafter",
+      "kind": "function",
+      "names": [
+        "math.nextafter"
+      ],
+      "arg_ports": [
+        "x",
+        "y"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_ulp",
+      "block": "math_ulp",
+      "kind": "function",
+      "names": [
+        "math.ulp"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_erf",
+      "block": "math_erf",
+      "kind": "function",
+      "names": [
+        "math.erf"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_erfc",
+      "block": "math_erfc",
+      "kind": "function",
+      "names": [
+        "math.erfc"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_gamma",
+      "block": "math_gamma",
+      "kind": "function",
+      "names": [
+        "math.gamma"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "math.math_lgamma",
+      "block": "math_lgamma",
+      "kind": "function",
+      "names": [
+        "math.lgamma"
+      ],
+      "arg_ports": [
+        "x"
+      ],
+      "result_port": "result",
+      "priority": 125
+    },
+    {
+      "id": "builtin.abs",
+      "block": "math_abs",
+      "kind": "function",
+      "names": [
+        "abs"
+      ],
+      "arg_ports": [
+        "value"
+      ],
+      "result_port": "result",
+      "priority": 180
+    },
+    {
+      "id": "builtin.round.value",
+      "block": "math_round",
+      "kind": "function",
+      "names": [
+        "round"
+      ],
+      "min_args": 1,
+      "max_args": 1,
+      "arg_ports": [
+        "value"
+      ],
+      "config": {
+        "mode": "without_digits"
+      },
+      "result_port": "result",
+      "priority": 180
+    },
+    {
+      "id": "builtin.round.digits",
+      "block": "math_round",
+      "kind": "function",
+      "names": [
+        "round"
+      ],
+      "min_args": 2,
+      "max_args": 2,
+      "arg_ports": [
+        "value",
+        "digits"
+      ],
+      "config": {
+        "mode": "with_digits"
+      },
+      "result_port": "result",
+      "priority": 181
+    },
+    {
+      "id": "builtin.round.keyword",
+      "block": "math_round",
+      "kind": "function",
+      "names": [
+        "round"
+      ],
+      "min_args": 1,
+      "max_args": 1,
+      "arg_ports": [
+        "value"
+      ],
+      "keyword_ports": {
+        "ndigits": "digits"
+      },
+      "config": {
+        "mode": "with_digits"
+      },
+      "result_port": "result",
+      "priority": 182
+    }
+  ]
+}

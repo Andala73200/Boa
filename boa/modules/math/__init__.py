@@ -1,0 +1,3 @@
+from boa.modules.math.specs import FEATURED_MATH_KEYS, MATH_BLOCK_KEYS, MATH_SPECS, SPECS
+
+__all__ = ["FEATURED_MATH_KEYS", "MATH_BLOCK_KEYS", "MATH_SPECS", "SPECS"]

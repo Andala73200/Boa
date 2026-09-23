@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "rules": [
+    {"id":"random.randint","block":"random_number","kind":"function","names":["random.randint"],"arg_ports":["minimum","maximum"],"config":{"mode":"integer"},"result_port":"result","priority":125},
+    {"id":"random.uniform","block":"random_number","kind":"function","names":["random.uniform"],"arg_ports":["minimum","maximum"],"config":{"mode":"decimal"},"result_port":"result","priority":125},
+    {"id":"random.choice","block":"random_collection","kind":"function","names":["random.choice"],"arg_ports":["collection"],"config":{"mode":"choose_item","with_replacement":false},"result_port":"result","priority":125},
+    {"id":"random.sample","block":"random_collection","kind":"function","names":["random.sample"],"arg_ports":["collection","count"],"keyword_ports":{"k":"count"},"min_args":1,"max_args":2,"config":{"mode":"sample","with_replacement":false},"result_port":"result","priority":125},
+    {"id":"random.choices","block":"random_collection","kind":"function","names":["random.choices"],"arg_ports":["collection","count"],"keyword_ports":{"k":"count"},"min_args":1,"max_args":2,"config":{"mode":"sample","with_replacement":true},"result_port":"result","priority":125}
+  ]
+}
